@@ -42,32 +42,36 @@ const PersonalInformationForm = ({ nextStage }) => {
         {formik.touched.fullName && formik.errors.fullName && (
           <div className="error">{formik.errors.fullName}</div>
         )}
-
-        <label htmlFor="dateOfBirth">Date of Birth:</label>
-        <input
-          type="date"
-          id="dateOfBirth"
-          name="dateOfBirth"
-          value={formik.values.dateOfBirth}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.touched.dateOfBirth && formik.errors.dateOfBirth && formik.dirty && (
-          <div className="error">{formik.errors.dateOfBirth}</div>
-        )}
-
-        <label htmlFor="nationality">Nationality:</label>
-        <input
-          type="text"
-          id="nationality"
-          name="nationality"
-          value={formik.values.nationality}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.touched.nationality && formik.errors.nationality && (
-          <div className="error">{formik.errors.nationality}</div>
-        )}
+        <div>
+          <label htmlFor="dateOfBirth">Date of Birth:</label>
+          <input
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            value={formik.values.dateOfBirth}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.dateOfBirth && formik.errors.dateOfBirth && formik.dirty && (
+            <div className="error">{formik.errors.dateOfBirth}</div>
+          )}
+        </div>
+        
+        <div>
+          <label htmlFor="nationality">Nationality:</label>
+          <input
+            type="text"
+            id="nationality"
+            name="nationality"
+            value={formik.values.nationality}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+          />
+          {formik.touched.nationality && formik.errors.nationality && (
+            <div className="error">{formik.errors.nationality}</div>
+          )}
+        </div>
+        
 
         <label htmlFor="email">Email:</label>
         <input

@@ -13,8 +13,18 @@ body {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 400px;
+  width: 100%; /* Adjusted width for mobile devices */
+  max-width: 400px; /* Added max-width to maintain layout on larger screens */
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Additional styles for screens with a maximum width of 600px (adjust as needed) */
+  .app {
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  /* You may need to further adjust other styles based on your design requirements */
 }
 
 .stage {
